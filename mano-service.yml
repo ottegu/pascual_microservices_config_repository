@@ -1,0 +1,22 @@
+server:
+  port: 8099
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pascual_microservice?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Madrid
+    username: ottegu
+    password: egu1236
+    initSQL: "SET NAMES 'utf8mb4'; SET LC_TIME_NAMES= 'es_ES';"
+    driverClassName: com.mysql.jdbc.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        hibernate:
+          show_sql: false
+          order_by:
+            default_null_ordering: last
